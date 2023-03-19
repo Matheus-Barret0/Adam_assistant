@@ -12,11 +12,11 @@ def executa_comando():
     try:
         with sr.Microphone() as source:
             print('Ouvindo...')
-            maquina.say('Hello')
-            maquina.runAndWait()
+            audio.energy_threshold = 500
             voz = audio.listen(source)
             comando = audio.recognize_google(voz, language='pt-BR')
             comando = comando.lower()
+
             if 'adam' in comando:
                 comando = comando.replace('adam', '')
     except:
