@@ -22,7 +22,6 @@ def executa_comando():
     except:
         maquina.say('Não escutei direito. Pode repetir?')
         maquina.runAndWait()
-        print('finalizando e repetindo')
 
     return comando
 
